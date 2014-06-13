@@ -103,6 +103,69 @@ fieldset {
 
 }
 
+.speech-content-mic{
+	-webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+
+body{
+  -webkit-animation-name: color;
+  animation-name: color;
+  
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes color {
+  0% {
+    background: #ea6b04;
+  }
+  
+  30%{
+  	background: #f452f6;
+  }
+  
+  50%{
+  	background: #52ecf6;
+  }
+  
+  70%{
+  	background: #4cae68;
+  }
+  
+  100% {
+    background: #ea6b04;
+  }
+}
+
+@keyframes scaler {
+	0% {
+	  background: #ea6b04;
+	}
+	
+	30%{
+		background: #f452f6;
+	}
+	
+	50%{
+		background: #52ecf6;
+	}
+	
+	70%{
+		background: #4cae68;
+	}
+	
+	100% {
+	  background: #ea6b04;
+	}
+}
 
 #main{
 display: flex;
@@ -113,6 +176,12 @@ width: 100%;
 height: 100%;
 position: fixed;
 top: 0;	
+}
+
+.resizo {
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	transition: height 0.2s;
 }
 
 #content{
@@ -134,7 +203,21 @@ top: 0;
 	border: none;
 }
 .speech-content-mic:hover{
-	background: #272727;
+	
+	
+	-webkit-animation-name: color;
+	animation-name: color;
+	
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
 }
 
 
@@ -144,7 +227,7 @@ textarea {
     font-size: 3em;
     width: 100%;
     text-align: center;
-   	padding: 40px 0 0;
+   	padding: 50px 0 0;
     outline: none;
 }
 
