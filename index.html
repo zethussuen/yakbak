@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript" src="js/textarea-helper.js"></script>
     <script type="text/javascript" src="js/speech-recognizer.js"></script>
-    
+    <script src='js/jquery.fittext.js'></script>
     <script src='js/jquery.autosize.js'></script>
 
   </head>
@@ -23,6 +23,12 @@
     	$(function(){
     		$('.resizo').autosize();
     	});
+    </script>
+    
+    <script type="text/javascript">
+//    	$("#fittext1").fitText();
+//    	$("#fittext2").fitText(1.2);
+    	$("#speech-page-content").fitText(1.2);
     </script>
   </body>
 </html>

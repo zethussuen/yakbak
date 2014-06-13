@@ -204,13 +204,12 @@ top: 0;
 }
 .speech-content-mic:hover{
 	
-	
 	-webkit-animation-name: color;
 	animation-name: color;
 	
 	-webkit-animation-direction: alternate;
 	animation-direction: alternate;
-	
+
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 	
@@ -227,8 +226,9 @@ textarea {
     font-size: 3em;
     width: 100%;
     text-align: center;
-   	padding: 50px 0 0;
+   	padding: 50px 20px 0;
     outline: none;
+    height: auto;
 }
 
 
