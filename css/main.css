@@ -118,8 +118,8 @@ body{
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   
-  -webkit-animation-duration: 8s;
-  animation-duration: 8s;
+  -webkit-animation-duration: 80s;
+  animation-duration: 80s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -145,7 +145,7 @@ body{
   }
 }
 
-@keyframes scaler {
+@keyframes color {
 	0% {
 	  background: #ea6b04;
 	}
@@ -201,6 +201,7 @@ top: 0;
 	color: white;
 	cursor: pointer;
 	border: none;
+	outline: none;
 }
 .speech-content-mic:hover{
 	
@@ -213,10 +214,60 @@ top: 0;
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 	
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.speech-mic-works{
+	-webkit-animation-name: red;
+	animation-name: red;
+	
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	
 	-webkit-animation-duration: 2s;
 	animation-duration: 2s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
+	
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+}
+
+
+@-webkit-keyframes red {
+  0% {
+    background: red;
+  }
+
+  
+  100% {
+    background: black;
+  }
+}
+
+@keyframes red {
+	0% {
+	  background: #ea6b04;
+	}
+	
+	30%{
+		background: #f452f6;
+	}
+	
+	50%{
+		background: #52ecf6;
+	}
+	
+	70%{
+		background: #4cae68;
+	}
+	
+	100% {
+	  background: #ea6b04;
+	}
 }
 
 
