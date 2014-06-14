@@ -1,34 +1,28 @@
 <html>
   <head>
-    <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
-    <script type="text/javascript" src="js/textarea-helper.js"></script>
-    <script type="text/javascript" src="js/speech-recognizer.js"></script>
-    <script src='js/jquery.fittext.js'></script>
-    <script src='js/jquery.autosize.js'></script>
-
+    <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
   </head>
   <body>
     <div id="main">
       <div id="content">
-<!--        <h1 id="about">YAK</h1>-->
         <div id="speech-content-elements">
           <textarea id="speech-page-content" class="resizo" name="pageContent" placeholder="Click Button, Start Talking"></textarea>
           <br />
-          <button class="speech-content-mic speech-mic">YACK BACK AT ME</button>
+          <button class="speech-content-mic speech-mic">YAK BAK AT ME</button>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="js/textarea-helper.js"></script>
+    <script type="text/javascript" src="js/speech-recognizer.js"></script>
+    <script src='js/jquery.autosize.js'></script>
     <script>
     	$(function(){
-    		$('.resizo').autosize();
+        $('.resizo').autosize();
+        $('.resizo').on('change', function(evt) {
+          $(this).trigger('autosize.resize');
+        });
     	});
-    </script>
-    
-    <script type="text/javascript">
-//    	$("#fittext1").fitText();
-//    	$("#fittext2").fitText(1.2);
-    	$("#speech-page-content").fitText(1.6);
     </script>
   </body>
 </html>
