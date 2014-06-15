@@ -177,6 +177,8 @@ width: 100%;
 height: 100%;
 position: fixed;
 top: 0;	
+-webkit-perspective: 1000px;
+perspective: 1000px
 }
 
 .resizo {
@@ -219,6 +221,7 @@ top: 0;
 }
 
 .speech-mic-works{
+	position: relative;
 	-webkit-animation-name: red;
 	animation-name: red;
 	
@@ -232,6 +235,18 @@ top: 0;
 	
 	-webkit-animation-timing-function: ease-out;
 	animation-timing-function: ease-out;
+	}
+
+.speech-mic-works:after{
+	content: '';
+	position: absolute;
+	background: url('../img/mic.svg') no-repeat center center;
+	background-size: cover;
+	height: 50px;
+	width: 50px;
+	right: 4%;
+	top: 35px;
+	
 }
 
 
@@ -283,10 +298,11 @@ textarea {
 #content{
 	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
+	-webkit-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
 	width: 55%;
-	
+	-webkit-transform: translateZ(0px) rotateY(0deg) translateX(0%) scale(1);
+	transform: translateZ(0px) rotateY(0deg) translateX(0%) scale(1);
 	z-index: 90;
 	
 }
@@ -295,23 +311,24 @@ textarea {
 	transition: all 0.4s;
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
-	-webkit-transform: translateZ(-1800px) translateX(42%) scale(.6) ;
-	transform: translateZ(-1800px) translateX(42%) scale(.6);
+	-webkit-transform: translateZ(-1800px) translateX(75%) rotateY(-25deg) scale(1.5) !important;
+	transform: translateZ(-1800px) translateX(75%) rotateY(-25deg) scale(1.5) !important;
 	-webkit-perspective: 200px;
 	perspective: 200px;
 	opacity: .9;
 	
 }
 
-.menuicon{
+.menuicon {
 	background: url('../img/menu.svg') no-repeat center center;
 	background-size: cover;
-	width: 40px;
-	height: 40px;
-	position:fixed;
-	top: 5;
+	width: 45px;
+	height: 45px;
+	position: fixed;
+	margin-left: -20px;
 	left: 50%;
 	opacity: .2;
+	top: 22px;
 }
 
 
@@ -396,16 +413,16 @@ section p{
 }
 
 .clickable{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 9999;
-	height: 50px;
 	width: 100%;
 	background: none;
 	cursor: pointer;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
+	padding: 50px;
 }
 .clickable:hover{
 	background: rgba(255,255,255,.05);
@@ -455,7 +472,7 @@ svg{
 	transition: all .2s ease-out;
 }
 a.tweet:hover svg{
-	-webkit-transform: scale(2);
+	-webkit-transform: scale(1.4);
 }
 
 /* ==========================================================================
