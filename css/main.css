@@ -410,6 +410,53 @@ section p{
 .clickable:hover{
 	background: rgba(255,255,255,.05);
 }
+a.tweet{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding: 3%;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+a{
+	position: fixed;
+	z-index: 999;
+}
+.twitter-icon{
+	border: none;
+	text-indent: ;
+	bottom: 0;
+	left: 50%;
+	width: 45px;
+	height: 45px;
+	z-index: 99;
+}
+
+
+.style0{
+	fill:	none;
+	fill-rule:	evenodd;
+}
+.svgtwitter{
+	fill: rgba(255,255,255,.2);
+}
+
+a.tweet:hover .svgtwitter{
+	fill: rgba(255,255,255,1);
+}
+a.tweet:hover{
+	background: #55ACEE;
+}
+svg{
+	padding: 5px;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+a.tweet:hover svg{
+	-webkit-transform: scale(2);
+}
 
 /* ==========================================================================
    Helper classes
