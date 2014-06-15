@@ -3,7 +3,18 @@
     <link rel="stylesheet" href="css/main.css" />
     <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
   </head>
+  
   <body>
+  
+	<section>
+	  <p>
+	  	Hi I'm Yak Bak. <br>
+	  	I say things back to you. <br>
+	  	I don't always understand. <br>
+	  	In fact, I don't even know how to read.
+	  </p>
+	</section>
+	
     <div id="main">
       <div id="content">
         <div id="speech-content-elements">
@@ -13,6 +24,11 @@
         </div>
       </div>
     </div>
+    
+    <span class="clickable">
+    	<span class="menuicon"></span>
+    </span>
+
     <script type="text/javascript" src="js/textarea-helper.js"></script>
     <script type="text/javascript" src="js/speech-recognizer.js"></script>
     <script src='js/jquery.autosize.js'></script>
@@ -23,6 +39,15 @@
           $(this).trigger('autosize.resize');
         });
     	});
+    </script>
+    
+    <script>
+    $(function() {                       //run when the DOM is ready
+      $(".clickable").click(function() {  //use a class, since your ID gets mangled
+        $( "#content" ).toggleClass( "perspective" ); 
+        $( "section" ).toggleClass( "showyourself" );     //add the class to the clicked element
+      });
+    });
     </script>
   </body>
 </html>

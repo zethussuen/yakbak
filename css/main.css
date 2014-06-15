@@ -18,6 +18,7 @@ input,
 select,
 textarea {
     color: #222;
+    font-family: sans-serif;
 }
 
 html {
@@ -184,9 +185,6 @@ top: 0;
 	transition: height 0.2s;
 }
 
-#content{
-	width: 55%;
-}
 
 .speech-content-mic{
 	max-width: 100%;
@@ -282,6 +280,136 @@ textarea {
     height: auto;
 }
 
+#content{
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	width: 55%;
+	
+	z-index: 90;
+	
+}
+.perspective {
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform: translateZ(-1800px) translateX(42%) scale(.6) ;
+	transform: translateZ(-1800px) translateX(42%) scale(.6);
+	-webkit-perspective: 200px;
+	perspective: 200px;
+	opacity: .9;
+	
+}
+
+.menuicon{
+	background: url('../img/menu.svg') no-repeat center center;
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+	position:fixed;
+	top: 5;
+	left: 50%;
+	opacity: .2;
+}
+
+
+@-webkit-keyframes rot {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  
+  100% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes rot {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  
+  100% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+.clickable:hover .menuicon{
+	-webkit-animation-name: rot;
+	animation-name: rot;
+	
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	opacity: 1;
+}
+
+section{
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 2.4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	opacity: 0;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transform: translateZ(-1800px) translateX(0%) scale(.8) ;
+	transform: translateZ(-1800px) translateX(0%) scale(.8);
+
+}
+section p{
+	width: 45%;
+	color: #fff;
+}
+.showyourself{
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform: translateZ(0px) translateX(-23%) scale(1) ;
+	transform: translateZ(0px) translateX(-23%) scale(1);
+	opacity:1;
+}
+
+.clickable{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	height: 50px;
+	width: 100%;
+	background: none;
+	cursor: pointer;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.clickable:hover{
+	background: rgba(255,255,255,.05);
+}
 
 /* ==========================================================================
    Helper classes
