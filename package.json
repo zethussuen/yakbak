@@ -1,0 +1,22 @@
+{
+  "name": "yakbak",
+  "version": "1.0.0",
+  "description": "I say things back to you. I don't always understand. In fact, I don't even know how to read.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zethussuen/yakbak.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zethussuen/yakbak/issues"
+  },
+  "homepage": "https://github.com/zethussuen/yakbak#readme"
+}
